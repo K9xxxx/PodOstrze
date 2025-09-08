@@ -50,4 +50,85 @@ gallery.addEventListener('mousemove', e => {
 });
 
 
+const track = document.getElementById("reviewsTrack");
+const wrapper = document.getElementById("reviewsWrapper");
+const cardWidth = wrapper.offsetWidth;
+
+let currentIndex = 0;
+let startXX = 0;
+let isDragging = false;
+let currentTranslate = 0;
+let prevTranslate = 0;
+
+function setSliderPosition() {
+  track.style.transform = `translateX(${currentTranslate}px)`;
+}
+
+function animateToIndex() {
+  currentTranslate = -currentIndex * cardWidth;
+  prevTranslate = currentTranslate;
+  setSliderPosition();
+}
+
+// Drag start
+wrapper.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  startXX = e.pageX;
+});
+
+wrapper.addEventListener("mouseup", (e) => {
+  isDragging = false;
+  const movedBy = e.pageX - startXX;
+
+  if (movedBy < -50 && currentIndex < track.children.length - 1) {
+    currentIndex += 1;
+  }
+  if (movedBy > 50 && currentIndex > 0) {
+    currentIndex -= 1;
+  }
+  animateToIndex();
+});
+
+wrapper.addEventListener("mouseleave", () => {
+  if (isDragging) {
+    isDragging = false;
+    animateToIndex();
+  }
+});
+
+wrapper.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+  const moved = e.pageX - startXX;
+  currentTranslate = prevTranslate + moved;
+  setSliderPosition();
+});
+
+// Obsługa na telefonie (touch)
+wrapper.addEventListener("touchstart", (e) => {
+  isDragging = true;
+  startXX = e.touches[0].clientX;
+});
+
+wrapper.addEventListener("touchend", (e) => {
+  isDragging = false;
+  const movedBy = e.changedTouches[0].clientX - startXX;
+
+  if (movedBy < -50 && currentIndex < track.children.length - 1) {
+    currentIndex += 1;
+  }
+  if (movedBy > 50 && currentIndex > 0) {
+    currentIndex -= 1;
+  }
+  animateToIndex();
+});
+
+wrapper.addEventListener("touchmove", (e) => {
+  if (!isDragging) return;
+  const moved = e.touches[0].clientX - startXX;
+  currentTranslate = prevTranslate + moved;
+  setSliderPosition();
+});
+
+
+
   
