@@ -14,6 +14,11 @@ closeBtn.addEventListener("click", () => {
   openBtn.classList.remove("hidden"); // pokaż ponownie hamburgera
 });
 
+
+
+
+
+
 const gallery = document.querySelector('.gallery-container');
 let isDown = false;
 let startX;
@@ -48,6 +53,17 @@ gallery.addEventListener('mousemove', e => {
   const walk = (x - startX) * 1; // mnożnik prędkości
   gallery.scrollLeft = scrollLeft - walk;
 });
+
+
+
+
+
+
+
+
+
+
+
 
 
 const track = document.getElementById("reviewsTrack");
