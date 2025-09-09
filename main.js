@@ -1,6 +1,10 @@
+gsap.registerPlugin(ScrollTrigger);
+
 const openBtn = document.getElementById("openMenu");
 const closeBtn = document.getElementById("closeMenu");
 const menu = document.getElementById("mobileMenu");
+const services = document.querySelectorAll(".service")
+console.log(services);
 
 openBtn.addEventListener("click", () => {
   menu.classList.remove("translate-x-full");
@@ -13,10 +17,6 @@ closeBtn.addEventListener("click", () => {
   menu.classList.add("translate-x-full");
   openBtn.classList.remove("hidden"); // pokaż ponownie hamburgera
 });
-
-
-
-
 
 
 const gallery = document.querySelector('.gallery-container');
@@ -54,21 +54,13 @@ gallery.addEventListener('mousemove', e => {
   gallery.scrollLeft = scrollLeft - walk;
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
 const track = document.getElementById("reviewsTrack");
 const wrapper = document.getElementById("reviewsWrapper");
-const cardWidth = wrapper.offsetWidth;
+const card = track.children[0]; 
+const cardStyle = window.getComputedStyle(card);
+const cardWidth = card.offsetWidth;
+const gap = parseInt(cardStyle.marginRight) || 20; // gap-[20px]
+const stepWidth = cardWidth + gap;
 
 let currentIndex = 0;
 let startXX = 0;
@@ -81,7 +73,7 @@ function setSliderPosition() {
 }
 
 function animateToIndex() {
-  currentTranslate = -currentIndex * cardWidth;
+  currentTranslate = -currentIndex * stepWidth;
   prevTranslate = currentTranslate;
   setSliderPosition();
 }
@@ -119,7 +111,7 @@ wrapper.addEventListener("mousemove", (e) => {
   setSliderPosition();
 });
 
-// Obsługa na telefonie (touch)
+// Obsługa touch
 wrapper.addEventListener("touchstart", (e) => {
   isDragging = true;
   startXX = e.touches[0].clientX;
@@ -145,6 +137,14 @@ wrapper.addEventListener("touchmove", (e) => {
   setSliderPosition();
 });
 
+services.forEach((el) => {
+  gsap.to(el, {
+    scrollTrigger: {
+      trigger: el,
+      start: "top 88%",
+      onEnter: () => el.classList.add(".active-service"),
+    },
+  });
+});
 
 
-  
