@@ -1,10 +1,20 @@
 gsap.registerPlugin(ScrollTrigger);
 
+document.addEventListener("DOMContentLoaded", function() {
 const openBtn = document.getElementById("openMenu");
 const closeBtn = document.getElementById("closeMenu");
 const menu = document.getElementById("mobileMenu");
 const services = document.querySelectorAll(".service")
-console.log(services);
+const sectionH2 = document.querySelectorAll("section h2")
+const buttonSection3 = document.querySelector(".divArticles a");
+const buttonSection2 = document.querySelector(".buttonSection2");
+const divArticles = document.querySelector(".divArticles");
+const TeamPic = document.querySelector(".teamPic");
+const sekcja1 = document.querySelectorAll(".classSection1");
+const sekcja1H1 = document.querySelectorAll(".classSection1 h1");
+
+
+console.log(sectionH2);
 
 openBtn.addEventListener("click", () => {
   menu.classList.remove("translate-x-full");
@@ -137,14 +147,171 @@ wrapper.addEventListener("touchmove", (e) => {
   setSliderPosition();
 });
 
-services.forEach((el) => {
+
+services.forEach((el) =>{
   gsap.to(el, {
     scrollTrigger: {
-      trigger: el,
-      start: "top 88%",
-      onEnter: () => el.classList.add(".active-service"),
+      trigger:el,
+      start: "top 80%",
+      onEnter:()=>{
+        el.classList.add("active-service");
+        setTimeout(() =>{
+          el.classList.add("additional-h3");
+        }, 500);
+      },
     },
   });
 });
 
 
+sectionH2.forEach((el) => {
+  gsap.to(el, {
+    scrollTrigger: {
+      trigger: el,
+      start: "top 80%",
+      onEnter: () => {
+        el.classList.add("active-h2");
+        setTimeout(() => {
+          el.classList.add("additional-h2");
+        }, 500); // 500 ms później
+      },
+    },
+  });
+});
+
+function animateText() {
+        const articles = document.querySelectorAll(".divArticles article");
+        let articleIndex = 0;
+        let charIndex = 0;
+
+        function showNextChar() {
+            if (articleIndex < articles.length) {
+                let article = articles[articleIndex];
+                article.style.display = 'block'; // Upewnij się, że artykuł jest widoczny
+                let text = article.getAttribute("data-text");
+
+                if (charIndex < text.length) {
+                    article.innerText = text.substring(0, charIndex + 1);
+                    charIndex++;
+                    setTimeout(showNextChar, 7); // Opóźnienie między znakami (15 ms)
+                } else {
+                    charIndex = 0;
+                    articleIndex++;
+                    setTimeout(showNextChar, 25); // Opóźnienie między artykułami (50 ms)
+                }
+            }
+        }
+
+        // Przygotowanie artykułów do animacji
+        articles.forEach(article => {
+            article.setAttribute("data-text", article.innerText);
+            article.innerText = ""; // Pusty początkowy tekst
+        });
+
+        showNextChar();
+    }
+
+    ScrollTrigger.create({
+        trigger: '.divArticles',
+        start: 'top 60%', 
+        once: true,
+        onEnter: animateText
+    });
+
+
+
+
+    function animateText2() {
+    const article = document.querySelector(".articleAbout"); // tylko jeden element
+    let charIndex = 0;
+
+    // zapisujemy tekst i czyścimy w środku
+    const text = article.innerText;
+    article.setAttribute("data-text", text);
+    article.innerText = "";
+
+    function showNextChar() {
+        if (charIndex < text.length) {
+            article.innerText = text.substring(0, charIndex + 1);
+            charIndex++;
+            setTimeout(showNextChar, 7); // prędkość pisania (ms)
+        }
+    }
+
+    showNextChar();
+}
+
+// ScrollTrigger
+ScrollTrigger.create({
+    trigger: ".articleAbout",
+    start: "top 60%",
+    once: true,
+    onEnter: animateText2
+});
+
+
+
+gsap.to(buttonSection3,{
+  scrollTrigger: {
+    trigger:'.divArticles',
+    start:"top 80%",
+    onEnter:()=> buttonSection3.classList.add("ButtonSection3Active")
+  },
+});
+
+gsap.to(buttonSection2,{
+  scrollTrigger: {
+    trigger:buttonSection2,
+    start:"top 80%",
+    onEnter:()=> buttonSection2.classList.add("ButtonSection2Active")
+  },
+});
+
+gsap.to(TeamPic,{
+  scrollTrigger:{
+    trigger:'.divArticles',
+    start:"top 80%",
+    onEnter:()=> TeamPic.classList.add("teamPicActive")
+  },
+});
+
+gsap.to(sekcja1H1[0],{
+  scrollTrigger:{
+    trigger:sekcja1,
+    start:"top 80%",
+    onEnter:()=> sekcja1H1[0].classList.add("h1-active")
+  },
+});
+gsap.to(sekcja1H1[1],{
+  scrollTrigger:{
+    trigger:sekcja1,
+    start:"top 80%",
+    onEnter:()=> sekcja1H1[1].classList.add("h1-active2")
+  },
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  });
