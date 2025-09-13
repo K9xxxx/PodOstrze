@@ -315,12 +315,17 @@ document.addEventListener("DOMContentLoaded", function () {
   ///// ANIMACJE POJAWIANIA SIE PRZYCISKÓW A
   ///// ANIMACJE POJAWIANIA SIE PRZYCISKÓW A
   gsap.to(buttonSection3, {
-    scrollTrigger: {
-      trigger: '.divArticles',
-      start: "top 80%",
-      onEnter: () => buttonSection3.classList.add("ButtonSection3Active")
-    },
-  });
+  scrollTrigger: {
+    trigger: '.divArticles',
+    start: "top 80%",
+    onEnter: () => {
+      setTimeout(() => {
+        buttonSection3.classList.add("ButtonSection3Active");
+      }, 7000);
+    }
+  }
+});
+
 
   gsap.to(buttonSection2, {
     scrollTrigger: {
