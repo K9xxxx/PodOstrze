@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pod Ostrze Tailwind ver</title>
     <link rel="stylesheet" href="./dist/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   </head>
   <body class="">
-    <div class="container-2xl-padding dark:bg-[#2d2d2d]">
-      <section class="max-w-screen max-h-screen 2xl:max-w-[1536px] 2xl:w-full">
+    <div class="container-2xl-padding dark:bg-[var(--main-black)] ">
+      <section class="max-w-screen max-h-screen 2xl:max-w-[1536px] 2xl:w-full overflow-hidden">
         <img
           src="./img/nawigacja.svg"
           alt="menu"
@@ -16,25 +20,26 @@
           class="fixed top-[20px] right-[20px] cursor-pointer z-50"
         />
         <header
-          class="flex justify-center items-center min-h-screen md:max-h-screen md:bg-no-repeat md:bg-cover bg-[url('../img/landing-page.png')] bg-cover bg-center px-[18px] py-[40px]"
+          class="hero-zoom flex justify-center items-center min-h-screen md:max-h-screen md:bg-no-repeat md:bg-cover bg-[url('../img/landing-page.png')] bg-cover bg-center px-[18px] py-[40px]"
         >
           <div
-            class="bg-[url('../img/pod-ostrze.png')] bg-size-[100%_100%] w-full h-[250px] md:w-[500px] md:h-[400px] xl:w-[1000px] xl:h-[600px]"
+            class="bg-[url('../img/pod-ostrze.png')] bg-[length:100%_100%] w-full h-[250px] md:w-[500px] md:h-[400px] xl:w-[700px] xl:h-[450px]"
           ></div>
         </header>
+
       </section>
 
       <section
-        class=" classSection1 py-[40px] px-[18px] bg-[#e6e6e6] dark:bg-[#2d2d2d] max-w-screen"
+        class=" classSection1 py-[40px] px-[18px] bg-[#e6e6e6] dark:bg-[var(--main-black)]  max-w-screen"
       >
         <img src="./img/ozdobnik.svg" alt="" class="m-auto" />
         <h1
-          class="transition-all duration-600 text-center xl:text-left xl:ml-[80px] xl:w-[80%] text-[40px] md:text-[60px] text-[#2d2d2d] dark:text-[#efefef] font-bold mt-[24px] xl:text-[80px]"
+          class="transition-all duration-600 text-center xl:text-left xl:ml-[80px] xl:w-[80%] text-[40px] md:text-[60px] text-[var(--main-black)]  dark:text-[var(--sec-white)] font-bold mt-[24px] xl:text-[80px]"
         >
           PRAWDZIWE PIĘKNO
         </h1>
         <h1
-          class="transition-all duration-1200 text-center xl:text-left xl:ml-[80px] xl:w-[80%] text-[40px] md:text-[60px] text-[#2d2d2d] dark:text-[#efefef] font-bold xl:text-[80px]"
+          class="transition-all duration-1200 text-center xl:text-left xl:ml-[80px] xl:w-[80%] text-[40px] md:text-[60px] text-[var(--main-black)]  dark:text-[var(--sec-white)] font-bold xl:text-[80px]"
         >
           ZACZYNA SIĘ TUTAJ
         </h1>
@@ -43,7 +48,7 @@
           class="flex flex-col xl:flex-row xl:mx-[80px] xl:gap-[80px] xl:mt-[80px]"
         >
           <article
-            class="articleAbout mt-[32px] md:mx-[100px] text-[15px] md:text-base xl:text-lg xl:w-[40%] xl:mx-[0px] text-[#2d2d2d] dark:text-[#868686] leading-[24px] xl:leading-[36px] xl:mt-[0px]"
+            class="articleAbout mt-[32px] md:mx-[100px] text-[15px] md:text-base xl:text-lg xl:w-[40%] xl:mx-[0px] text-[var(--main-black)]  dark:text-[var(--sec-black)] leading-[24px] xl:leading-[36px] xl:mt-[0px]"
           >
             Salon fryzjerski POD OSTRZE to miejsce, gdzie pasja spotyka się z
             precyzją. Działamy od 2022 roku i od początku naszym celem było
@@ -65,39 +70,35 @@
             class="mt-[150px] mb-[150px] relative flex xl:flex-col xl:gap-[24px] xl:justify-start xl:w-[59.99%] xl:my-[0px] xl:items-start justify-center items-center"
           >
             <div
-              class="section2-img transition-all duration-500 w-[200px] h-[250px] border border-red dark:border-[#A66841] rounded-[10px] m-auto xl:m-[0px] bg-[url('../img/sekcja1-1.png')] bg-center absolute xl:relative xl:ml-[80px]"
+              class="section2-img transition-all duration-500 w-[200px] h-[250px] border border-red dark:border-[var(--sec-orange)] rounded-[10px] m-auto xl:m-[0px] bg-[url('../img/sekcja1-1.png')] bg-center absolute xl:relative xl:ml-[80px]"
             ></div>
             <div
-              class="section2-img transition-all duration-500 w-[200px] h-[250px] border border-red dark:border-[#A66841] rounded-[10px] m-auto xl:m-[0px] bg-[url('../img/sekcja1-2.jpg')] bg-center bg-cover absolute xl:relative xl:self-end xl:mr-[80px]"
+              class="section2-img transition-all duration-500 w-[200px] h-[250px] border border-red dark:border-[var(--sec-orange)] rounded-[10px] m-auto xl:m-[0px] bg-[url('../img/sekcja1-2.jpg')] bg-center bg-cover absolute xl:relative xl:self-end xl:mr-[80px]"
             ></div>
           </div>
         </div>
       </section>
 
       <section
-        class="py-[40px] px-[18px] bg-[#e6e6e6] dark:bg-[#2d2d2d] max-w-screen"
+        class="py-[40px] px-[18px] bg-[#e6e6e6] dark:bg-[var(--main-black)]  max-w-screen"
       >
         <img src="./img/ozdobnik.svg" alt="" class="m-auto" />
         <h2
-          class="transition-all ease-in-out duration-300 mt-[24px] font-bold text-[#2d2d2d] dark:text-[#efefef] text-center xl:text-left xl:ml-[80px] xl:w-[60%] text-[32px] md:text-[56px]"
+          class="transition-all ease-in-out duration-300 mt-[24px] font-bold text-[var(--main-black)]  dark:text-[var(--sec-white)] text-center xl:text-left xl:ml-[80px] xl:w-[60%] text-[32px] md:text-[56px]"
         >
           SPECJAŁY Z NASZEGO FRYZJERSKIEGO MENU
         </h2>
-        <div class="flex justify-around flex-row py-[60px]">
-          <div class="w-[80px] h-[80px] border border-red"></div>
-          <div class="w-[80px] h-[80px] border border-red"></div>
-        </div>
 
-        <div class="flex flex-col xl:gap-[80px]">
+        <div class="flex flex-col xl:gap-[80px] mt-[60px]">
           <div class="service transition-all duration-300 ease-in-out xl:items-center">
             <div>
               <h3
-                class="transition-all delay-350 duration-300 ease-in-out font-bold text-[24px] md:text-[32px] text-[#2d2d2d] dark:text-[#efefef] text-center xl:w-[800px] xl:text-center xl:m-auto"
+                class="transition-all delay-350 duration-300 ease-in-out font-bold text-[24px] md:text-[32px] text-[var(--main-black)]  dark:text-[var(--sec-white)] text-center xl:w-[800px] xl:text-center xl:m-auto"
               >
                 Strzyżenie damskie, męskie i dziecięce
               </h3>
               <p
-                class="transition-all delay-450 duration-300 ease-in-out mt-[24px] md:mx-[100px] text-center text-[15px] md:text-base xl:text-lg text-[#2d2d2d] dark:text-[#868686] xl:w-[400px] xl:text-center xl:m-auto xl:my-[20px]"
+                class="transition-all delay-450 duration-300 ease-in-out mt-[24px] md:mx-[100px] text-center text-[15px] md:text-base xl:text-lg text-[var(--main-black)]  dark:text-[var(--sec-black)] xl:w-[400px] xl:text-center xl:m-auto xl:my-[20px]"
               >
                 Odświeżenie fryzury dostosowane do typu urody, kształtu twarzy i
                 stylu życia. Strzyżemy z precyzją – od najmłodszych po
@@ -113,12 +114,12 @@
           >
             <div>
               <h3
-                class="transition-all delay-350 duration-300 ease-in-out font-bold text-[24px] md:text-[32px] text-[#2d2d2d] dark:text-[#efefef] text-center xl:w-[800px] xl:text-center xl:m-auto"
+                class="transition-all delay-350 duration-300 ease-in-out font-bold text-[24px] md:text-[32px] text-[var(--main-black)]  dark:text-[var(--sec-white)] text-center xl:w-[800px] xl:text-center xl:m-auto"
               >
                 Koloryzacja jednolita / wielotonowa / ombre / sombre / balayage
               </h3>
               <p
-                class="transition-all delay-450 duration-300 ease-in-out mt-[24px] md:mx-[100px] text-center text-[15px] md:text-base xl:text-lg text-[#2d2d2d] dark:text-[#868686] xl:w-[600px] xl:text-center xl:my-[20px]"
+                class="transition-all delay-450 duration-300 ease-in-out mt-[24px] md:mx-[100px] text-center text-[15px] md:text-base xl:text-lg text-[var(--main-black)]  dark:text-[var(--sec-black)] xl:w-[600px] xl:text-center xl:my-[20px]"
               >
                 Tworzymy kolory, które podkreślają Twój charakter – od
                 klasycznej koloryzacji po artystyczne przejścia. Pracujemy na
@@ -134,12 +135,12 @@
           >
             <div>
               <h3
-                class="transition-all delay-350 duration-300 ease-in-out font-bold text-[24px] md:text-[32px] text-[#2d2d2d] dark:text-[#efefef] text-center xl:w-[800px] xl:text-center xl:m-auto"
+                class="transition-all delay-350 duration-300 ease-in-out font-bold text-[24px] md:text-[32px] text-[var(--main-black)]  dark:text-[var(--sec-white)] text-center xl:w-[800px] xl:text-center xl:m-auto"
               >
                 Regeneracja i pielęgnacja włosów (np. botoks, keratyna)
               </h3>
               <p
-                class="transition-all delay-450 duration-300 ease-in-out mt-[24px] md:mx-[100px] text-center text-[15px] md:text-base xl:text-lg text-[#2d2d2d] dark:text-[#868686] xl:w-[600px] xl:text-center xl:my-[20px]"
+                class="transition-all delay-450 duration-300 ease-in-out mt-[24px] md:mx-[100px] text-center text-[15px] md:text-base xl:text-lg text-[var(--main-black)]  dark:text-[var(--sec-black)] xl:w-[600px] xl:text-center xl:my-[20px]"
               >
                 Twoje włosy zasługują na odżywienie – zregenerujemy je od
                 cebulek po końcówki. Zabiegi dobieramy indywidualnie, by
@@ -155,12 +156,12 @@
           >
             <div>
               <h3
-                class="transition-all delay-350 duration-300 ease-in-out font-bold text-[24px] md:text-[32px] text-[#2d2d2d] dark:text-[#efefef] text-center xl:w-[800px] xl:text-center xl:m-auto"
+                class="transition-all delay-350 duration-300 ease-in-out font-bold text-[24px] md:text-[32px] text-[var(--main-black)]  dark:text-[var(--sec-white)] text-center xl:w-[800px] xl:text-center xl:m-auto"
               >
                 Modelowanie i pielęgnacja brody
               </h3>
               <p
-                class="transition-all delay-450 duration-300 ease-in-out mt-[24px] md:mx-[100px] text-center text-[15px] md:text-base xl:text-lg text-[#2d2d2d] dark:text-[#868686] xl:w-[600px] xl:text-center xl:my-[20px]"
+                class="transition-all delay-450 duration-300 ease-in-out mt-[24px] md:mx-[100px] text-center text-[15px] md:text-base xl:text-lg text-[var(--main-black)]  dark:text-[var(--sec-black)] xl:w-[600px] xl:text-center xl:my-[20px]"
               >
                 Broda w dobrej formie to podstawa – nadajemy jej kształt, styl i
                 zdrowy wygląd. Używamy odpowiednich kosmetyków i technik, by
@@ -168,7 +169,7 @@
               </p>
             </div>
             <div
-              class="transition-all delay-350 duration-300 ease-in-out m-auto my-[24px] w-[200px] h-[250px] rounded-[10px] border border-black bg-gray-500"
+              class="transition-all delay-350 duration-300 ease-in-out m-auto my-[24px] w-[200px] h-[250px] rounded-[10px] border border-black bg-[url('../img/uslugi4.png')]"
             ></div>
           </div>
           <div
@@ -176,12 +177,12 @@
           >
             <div>
               <h3
-                class="transition-all delay-350 duration-300 ease-in-out font-bold text-[24px] md:text-[32px] text-[#2d2d2d] dark:text-[#efefef] text-center xl:w-[800px] xl:text-center xl:m-auto"
+                class="transition-all delay-350 duration-300 ease-in-out font-bold text-[24px] md:text-[32px] text-[var(--main-black)]  dark:text-[var(--sec-white)] text-center xl:w-[800px] xl:text-center xl:m-auto"
               >
                 Stylizacja włosów i brody – pomady, woski, mat
               </h3>
               <p
-                class="transition-all delay-450 duration-300 ease-in-out mt-[24px] md:mx-[100px] text-center text-[15px] md:text-base xl:text-lg text-[#2d2d2d] dark:text-[#868686] xl:w-[600px] xl:text-center xl:my-[20px]"
+                class="transition-all delay-450 duration-300 ease-in-out mt-[24px] md:mx-[100px] text-center text-[15px] md:text-base xl:text-lg text-[var(--main-black)]  dark:text-[var(--sec-black)] xl:w-[600px] xl:text-center xl:my-[20px]"
               >
                 Pokażemy Ci, jak panować nad fryzurą i brodą na co dzień.
                 Doradzimy produkty i techniki, które sprawdzą się idealnie przy
@@ -189,12 +190,12 @@
               </p>
             </div>
             <div
-              class="transition-all delay-350 duration-300 ease-in-out m-auto my-[24px] w-[200px] h-[250px] rounded-[10px] border border-black bg-gray-500"
+              class="transition-all delay-350 duration-300 ease-in-out m-auto my-[24px] w-[200px] h-[250px] rounded-[10px] border border-black bg-[url('../img/uslugi5.png')] bg-cover"
             ></div>
           </div>
           <a
             href="#"
-            class="buttonSection2 opacity-0  transition-all duration-300 text-[15px] dark:text-[#ffffff] dark:bg-[#282828] dark:border-[#ffffff] md:text-base xl:text-lg text-[#ffffff] py-[15px] px-[30px] border rounded-[10px] border-[#963F09] m-auto text-center bg-[#A66841] text-shadow-[2px_2px_2px_#000000] hover:bg-[#A66841] dark:hover:bg-[#212121] dark:hover:border-[#963F09] dark:hover:text-shadow-[2px_2px_2px_#000000]"
+            class="buttonSection2 opacity-0  transition-all duration-300 text-[15px] dark:text-[var(--main-white)] dark:bg-[#282828] dark:border-[#ffffff] md:text-base xl:text-lg text-[var(--main-white)] py-[15px] px-[30px] border rounded-[10px] border-[var(--main-orange)] m-auto text-center bg-[var(--sec-orange)] text-shadow-[2px_2px_2px_#000000] hover:bg-[var(--sec-orange)] dark:hover:bg-[#212121] dark:hover:border-[var(--main-orange)] dark:hover:text-shadow-[2px_2px_2px_#000000]"
           >
             Wszystkie usługi
           </a>
@@ -202,19 +203,19 @@
       </section>
 
       <section
-        class="py-[40px] px-[18px] bg-[#e6e6e6] dark:bg-[#2d2d2d] max-w-screen"
+        class="py-[40px] px-[18px] bg-[#e6e6e6] dark:bg-[var(--main-black)]  max-w-screen"
       >
         <div class="flex flex-col">
           <img src="./img/ozdobnik.svg" alt="" class="m-auto" />
           <h2
-            class="transition-all ease-in-out duration-300 mt-[24px] font-bold text-[#2d2d2d] dark:text-[#efefef] text-center xl:text-left xl:ml-[80px] xl:w-[60%] text-[32px] md:text-[56px]"
+            class="transition-all ease-in-out duration-300 mt-[24px] font-bold text-[var(--main-black)]  dark:text-[var(--sec-white)] text-center xl:text-left xl:ml-[80px] xl:w-[60%] text-[32px] md:text-[56px]"
           >
             TEAM, KTÓRY WŁOSY ZMIENIA JAK KAPELUSZ
           </h2>
           <div class="flex flex-col xl:flex-row xl:mx-[80px] xl:gap-[80px]">
             <div class="divArticles flex flex-col xl:w-[60%] xl:pb-[100px]">
               <article
-                class="mt-[40px] md:mx-[100px] xl:mx-[0px] mb-[15px] text-center text-[15px] md:text-base xl:text-lg text-[#2d2d2d] dark:text-[#868686]"
+                class="mt-[40px] md:mx-[100px] xl:mx-[0px] mb-[15px] text-center text-[15px] md:text-base xl:text-lg text-[var(--main-black)]  dark:text-[var(--sec-black)]"
               >
                 Witaj w Pod Ostrze – miejscu, gdzie pasja spotyka się z
                 precyzją, a włosy zmieniają się szybciej niż… kapelusz! Nasz
@@ -222,7 +223,7 @@
                 trochę psychologowie od spraw włosowych.
               </article>
               <article
-                class="mb-[15px] md:mx-[100px] xl:mx-[0px] text-center text-[15px] md:text-base xl:text-lg text-[#2d2d2d] dark:text-[#868686]"
+                class="mb-[15px] md:mx-[100px] xl:mx-[0px] text-center text-[15px] md:text-base xl:text-lg text-[var(--main-black)]  dark:text-[var(--sec-black)]"
               >
                 WNa czele tej zgranej ekipy stoi Michał Baran, właściciel i
                 główny fryzjer z sercem większym niż nożyczki, które trzyma w
@@ -231,7 +232,7 @@
                 tylko po fryzurę, ale też po dobry nastrój.
               </article>
               <article
-                class="mb-[40px] md:mx-[100px] text-center text-[15px] md:text-base xl:text-lg text-[#2d2d2d] dark:text-[#868686] xl:mx-[0px]"
+                class="mb-[40px] md:mx-[100px] text-center text-[15px] md:text-base xl:text-lg text-[var(--main-black)]  dark:text-[var(--sec-black)] xl:mx-[0px]"
               >
                 WitKażdy z członków naszego teamu ma swój własny styl, oko do
                 detalu i ucho do tego, co naprawdę chcesz zmienić. Kochamy
@@ -241,13 +242,13 @@
               </article>
               <a
                 href="#"
-                class="opacity-0 transition-all duration-300 text-[15px] dark:text-[#ffffff] dark:bg-[#282828] dark:border-[#ffffff] md:text-base xl:text-lg text-[#ffffff] py-[15px] px-[30px] border rounded-[10px] border-[#963F09] m-auto text-center bg-[#A66841]                       text-shadow-[2px_2px_2px_#000000] hover:bg-[#A66841] dark:hover:bg-[#212121] dark:hover:border-[#963F09] dark:hover:text-shadow-[2px_2px_2px_#000000]"
+                class="opacity-0 transition-all duration-300 text-[15px] dark:text-[var(--main-white)] dark:bg-[#282828] dark:border-[#ffffff] md:text-base xl:text-lg text-[var(--main-white)] py-[15px] px-[30px] border rounded-[10px] border-[var(--main-orange)] m-auto text-center bg-[var(--sec-orange)]                      text-shadow-[2px_2px_2px_#000000] hover:bg-[var(--sec-orange)] dark:hover:bg-[#212121] dark:hover:border-[var(--main-orange)] dark:hover:text-shadow-[2px_2px_2px_#000000]"
               >
                 Nasz zespół
               </a>
             </div>
             <div
-              class=" teamPic transition-all duration-600 mt-[48px] mx-auto w-[300px] h-[400px] rounded-[10px] border dark:border-[#A66841] shadow-[0px_0px_10px_#000000] bg-[#fff] xl:self-end xl:w-[400px] xl:h-[550px]"
+              class=" teamPic transition-all duration-600 mt-[48px] mx-auto w-[300px] h-[400px] rounded-[10px] border dark:border-[var(--sec-orange)] shadow-[0px_0px_10px_#000000] bg-[#fff] xl:self-end xl:w-[400px] xl:h-[550px]"
             ></div>
           </div>
         </div>
@@ -258,90 +259,90 @@
       >
         <img src="./img/ozdobnik.svg" alt="" class="m-auto" />
         <h2
-          class="transition-all ease-in-out duration-300 mt-[24px] mb-[24px] font-bold text-[#2d2d2d] dark:text-[#efefef] text-center xl:text-left xl:ml-[80px] xl:w-[60%] text-[32px] md:text-[56px]"
+          class="transition-all ease-in-out duration-300 mt-[24px] mb-[24px] font-bold text-[var(--main-black)] dark:text-[var(--sec-white)] text-center xl:text-left xl:ml-[80px] xl:w-[60%] text-[32px] md:text-[56px]"
         >
           ZADZWOŃ ZANIM ODROŚNIE
         </h2>
         <div
-          class="m-auto flex flex-col xl:flex-row xl:justify-start xl:mx-[80px] xl:p-[32px]"
+          class="m-auto flex flex-col xl:flex-row xl:justify-start xl:mx-[80px] xl:p-[32px] xl:border-[#000000] xl:rounded-[10px] xl:bg-[#000000]/55 xl:gap-[18px]"
         >
           <div
-            class="flex flex-row mx-auto w-[250px] gap-[8px] mt-[32px] xl:mx-[0px]"
+            class="flex flex-row mx-auto w-[250px] gap-[8px] mt-[32px] xl:mx-[0px] xl:mt-[0px]"
           >
             <img src="./img/clock.svg" alt="" class="ikon transition-all ease-in-out duration-300  self-start" />
             <div class="flex flex-col">
               <h6
-                class="text-[24px] text-[#fff] text-shadow-[2px_2px_2px_#000]"
+                class="text-[24px] text-[var(--main-white)] text-shadow-[2px_2px_2px_#000] mt-[-5px]"
               >
                 Godziny Otwarcia
               </h6>
-              <p class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]">
+              <p class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#000]">
                 Poniedziałek 9:00-18:00
               </p>
-              <p class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]">
+              <p class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#000]">
                 Wtorek 9:00-18:00
               </p>
-              <p class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]">
+              <p class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#000]">
                 Środa 9:00-18:00
               </p>
-              <p class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]">
+              <p class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#000]">
                 Czwartek 9:00-18:00
               </p>
-              <p class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]">
+              <p class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#000]">
                 Piątek 9:00-18:00
               </p>
-              <p class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]">
+              <p class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#000]">
                 Sobota 9:00-18:00
               </p>
-              <p class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]">
+              <p class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#000]">
                 Niedziela -
               </p>
             </div>
           </div>
           <div
-            class="flex flex-row mx-auto w-[250px] gap-[8px] mt-[32px] xl:mx-[0px]"
+            class="flex flex-row mx-auto w-[250px] gap-[8px] mt-[32px] xl:mx-[0px] xl:mt-[0px]"
           >
             <img src="./img/phone.svg" alt="" class="ikon self-start transition-all ease-in-out duration-300 delay-100" />
             <div class="flex flex-col">
               <h6
-                class="text-[24px] text-[#fff] text-shadow-[2px_2px_2px_#000]"
+                class="text-[24px] text-[var(--main-white)] text-shadow-[2px_2px_2px_#000] mt-[-5px]"
               >
                 Telefon:
               </h6>
-              <p class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]">
+              <p class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#000]">
                 +48 694 358 660
               </p>
             </div>
           </div>
           <div
-            class="flex flex-row mx-auto w-[250px] gap-[8px] mt-[32px] xl:mx-[0px]"
+            class="flex flex-row mx-auto w-[250px] gap-[8px] mt-[32px] xl:mx-[0px] xl:mt-[0px]"
           >
             <img src="./img/mail.svg" alt="" class="ikon self-start  transition-all ease-in-out duration-300 delay-200" />
             <div class="flex flex-col">
               <h6
-                class="text-[24px] text-[#fff] text-shadow-[2px_2px_2px_#000]"
+                class="text-[24px] text-[var(--main-white)] text-shadow-[2px_2px_2px_#000] mt-[-5px]"
               >
                 E-mail:
               </h6>
-              <p class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]">
+              <p class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#000]">
                 Podostrze@gmail.com
               </p>
             </div>
           </div>
           <div
-            class="flex flex-row mx-auto w-[250px] gap-[8px] mt-[32px] xl:mx-[0px]"
+            class="flex flex-row mx-auto w-[250px] gap-[8px] mt-[32px] xl:mx-[0px] xl:mt-[0px]"
           >
             <img src="./img/map-pin.svg" alt="" class="ikon self-start transition-all ease-in-out duration-300 delay-300" />
             <div class="flex flex-col">
               <h6
-                class="text-[24px] text-[#fff] text-shadow-[2px_2px_2px_#000]"
+                class="text-[24px] text-[var(--main-white)] text-shadow-[2px_2px_2px_#000] mt-[-5px]"
               >
                 Adres:
               </h6>
-              <p class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]">
+              <p class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#000]">
                 Opole, 42-222
               </p>
-              <p class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]">
+              <p class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#000]">
                 ul.Podchalna 22
               </p>
             </div>
@@ -350,17 +351,17 @@
       </section>
 
       <section
-        class="py-[40px] bg-[#e6e6e6] dark:bg-[#2d2d2d] max-w-screen overflow-hidden flex flex-col"
+        class="py-[40px] bg-[#e6e6e6] dark:bg-[var(--main-black)]  max-w-screen overflow-hidden flex flex-col"
       >
         <img src="./img/ozdobnik.svg" alt="" class="m-auto" />
         <h2
-          class="transition-all ease-in-out duration-300 mt-[24px] mb-[24px] font-bold text-[#2d2d2d] dark:text-[#efefef] text-center xl:text-left xl:ml-[80px] xl:w-[60%] text-[32px] md:text-[56px] px-[18px] xl:relative"
+          class="transition-all ease-in-out duration-300 mt-[24px] mb-[24px] font-bold text-[var(--main-black)]  dark:text-[var(--sec-white)] text-center xl:text-left xl:ml-[80px] xl:w-[60%] text-[32px] md:text-[56px] px-[18px] xl:relative"
         >
           Fryzury, które mówią „wow” zanim Ty zdążysz
         </h2>
         <div
           class="overflow-x-scroll scrollbar-hide select-none scroll-smooth snap-x snap-mandatory gallery-container
-            py-[32px] px-[16px] flex flex-row bg-[#282828] border-y-[2px] border-[#963F09] gap-[32px] mb-[32px]
+            py-[32px] px-[16px] flex flex-row bg-[#282828] border-y-[2px] border-[var(--main-orange)] gap-[32px] mb-[32px]
             xl:w-[calc(100vw-160px)] xl:mx-auto xl:border-[2px] xl:rounded-[10px] xl:px-[48px]
             scroll-px-[16px] xl:scroll-px-[48px] xl:mb-[60px]"
         >
@@ -385,23 +386,23 @@
         </div>
         <a
           href="#"
-          class="text-[15px] dark:text-[#ffffff] dark:bg-[#282828] dark:border-[#ffffff] md:text-base xl:text-lg text-[#ffffff] py-[15px] px-[30px] border rounded-[10px] border-[#963F09] text-center bg-[#A66841] text-shadow-[2px_2px_2px_#000000] w-fit m-auto hover:bg-[#A66841] dark:hover:bg-[#212121] dark:hover:border-[#963F09] dark:hover:text-shadow-[2px_2px_2px_#000000] transition-all duration-300 ease-in-out"
+          class=" button4 opacity-0 text-[15px] dark:text-[var(--main-white)] dark:bg-[#282828] dark:border-[#ffffff] md:text-base xl:text-lg text-[var(--main-white)] py-[15px] px-[30px] border rounded-[10px] border-[var(--main-orange)] text-center bg-[var(--sec-orange)] text-shadow-[2px_2px_2px_#000000] w-fit m-auto hover:bg-[var(--sec-orange)] dark:hover:bg-[#212121] dark:hover:border-[var(--main-orange)] dark:hover:text-shadow-[2px_2px_2px_#000000] transition-all duration-300 ease-in-out"
         >
           Więcej naszych kreacji
         </a>
       </section>
 
       <section
-        class="py-[40px] px-[18px] bg-[#e6e6e6] dark:bg-[#2d2d2d] max-w-screen"
+        class="py-[40px] px-[18px] bg-[#e6e6e6] dark:bg-[var(--main-black)]  max-w-screen"
       >
         <img src="./img/ozdobnik.svg" alt="" class="m-auto" />
         <h2
-          class="transition-all ease-in-out duration-300 mt-[24px] mb-[24px] font-bold text-[#2d2d2d] dark:text-[#efefef] text-center xl:text-left xl:ml-[80px] xl:w-[60%] text-[32px] md:text-[56px] px-[18px]"
+          class="transition-all ease-in-out duration-300 mt-[24px] mb-[24px] font-bold text-[var(--main-black)]  dark:text-[var(--sec-white)] text-center xl:text-left xl:ml-[80px] xl:w-[60%] text-[32px] md:text-[56px] px-[18px]"
         >
           Głos klientów: fryzjerskie 5 gwiazdek
         </h2>
         <div class="flex flex-col mt-[40px] text-center">
-          <p class="text-[#2d2d2d] dark:text-[#efefef] text-[32px] font-bold">
+          <p class="text-[var(--main-black)]  dark:text-[var(--sec-white)] text-[32px] font-bold">
             DOSKONAŁA
           </p>
           <img
@@ -409,7 +410,7 @@
             alt=""
             class="w-[170px] h-[35px] mx-auto mt-[16px]"
           />
-          <p class="text-[#2d2d2d] dark:text-[#efefef] text-[18px] mt-[8px]">
+          <p class="text-[var(--main-black)]  dark:text-[var(--sec-white)] text-[18px] mt-[8px]">
             Na podstawie <b>125 opinii</b>
           </p>
           <img
@@ -420,7 +421,7 @@
         </div>
         <div
           id="reviewsWrapper"
-          class="relative w-[300px] mx-auto overflow-hidden xl:w-auto"
+          class="relative w-[300px] mx-auto overflow-hidden xl:w-auto mb-[24px]"
         >
           <div
             id="reviewsTrack"
@@ -431,18 +432,18 @@
             >
               <div class="flex flex-row justify-between mb-[8px]">
                 <div
-                  class="bg-[#FE3C9A] w-[35px] h-[35px] rounded-full flex justify-center items-center text-[20px] text-[#fff]"
+                  class="bg-[#FE3C9A] w-[35px] h-[35px] rounded-full flex justify-center items-center text-[20px] text-[var(--main-white)]"
                 >
                   Sz
                 </div>
                 <div class="flex flex-col w-[180px]">
                   <p
-                    class="font-bold text-[15px] font-[#2d2d2d] dark:text-[#868686] ml-[-8px]"
+                    class="font-bold text-[15px] font-[var(--main-black)]  dark:text-[var(--sec-black)] ml-[-8px]"
                   >
                     Szymon Bieliński
                   </p>
                   <p
-                    class="font-light text-[11px] font-[#464646] dark:text-[#868686] ml-[-8px]"
+                    class="font-light text-[11px] font-[#464646] dark:text-[var(--sec-black)] ml-[-8px]"
                   >
                     2025-05-04
                   </p>
@@ -455,14 +456,14 @@
               </div>
               <img src="./img/stars-big.svg" alt="" class="w-[95px] h-[20px]" />
               <p
-                class="text-[#2d2d2d] dark:text-[#efefef] text-[13px] mt-[8px]"
+                class="text-[var(--main-black)]  dark:text-[var(--sec-white)] text-[13px] mt-[8px]"
               >
                 Zdecydowanie najlepszy barber w Warszawie do jakiego
                 zawitałem...
               </p>
               <a
                 href="#"
-                class="text-[13px] text-[#464646] dark:text-[#868686] mt-[8px]"
+                class="text-[13px] text-[#464646] dark:text-[var(--sec-black)] mt-[8px] hover:text-[var(--main-white)] transition-all duration-300 ease-in-out"
               >
                 Czytaj więcej
               </a>
@@ -472,18 +473,18 @@
             >
               <div class="flex flex-row justify-between mb-[8px]">
                 <div
-                  class="bg-[#FE3C9A] w-[35px] h-[35px] rounded-full flex justify-center items-center text-[20px] text-[#fff]"
+                  class="bg-[#FE3C9A] w-[35px] h-[35px] rounded-full flex justify-center items-center text-[20px] text-[var(--main-white)]"
                 >
                   Sz
                 </div>
                 <div class="flex flex-col w-[180px]">
                   <p
-                    class="font-bold text-[15px] font-[#2d2d2d] dark:text-[#868686] ml-[-8px]"
+                    class="font-bold text-[15px] font-[var(--main-black)]  dark:text-[var(--sec-black)] ml-[-8px]"
                   >
                     Szymon Bieliński
                   </p>
                   <p
-                    class="font-light text-[11px] font-[#464646] dark:text-[#868686] ml-[-8px]"
+                    class="font-light text-[11px] font-[#464646] dark:text-[var(--sec-black)] ml-[-8px]"
                   >
                     2025-05-04
                   </p>
@@ -496,14 +497,14 @@
               </div>
               <img src="./img/stars-big.svg" alt="" class="w-[95px] h-[20px]" />
               <p
-                class="text-[#2d2d2d] dark:text-[#efefef] text-[13px] mt-[8px]"
+                class="text-[var(--main-black)]  dark:text-[var(--sec-white)] text-[13px] mt-[8px]"
               >
                 Zdecydowanie najlepszy barber w Warszawie do jakiego
                 zawitałem...
               </p>
               <a
                 href="#"
-                class="text-[13px] text-[#464646] dark:text-[#868686] mt-[8px]"
+                class="text-[13px] text-[#464646] dark:text-[var(--sec-black)] mt-[8px] hover:text-[var(--main-white)] transition-all duration-300 ease-in-out"
               >
                 Czytaj więcej
               </a>
@@ -513,18 +514,18 @@
             >
               <div class="flex flex-row justify-between mb-[8px]">
                 <div
-                  class="bg-[#FE3C9A] w-[35px] h-[35px] rounded-full flex justify-center items-center text-[20px] text-[#fff]"
+                  class="bg-[#FE3C9A] w-[35px] h-[35px] rounded-full flex justify-center items-center text-[20px] text-[var(--main-white)]"
                 >
                   Sz
                 </div>
                 <div class="flex flex-col w-[180px]">
                   <p
-                    class="font-bold text-[15px] font-[#2d2d2d] dark:text-[#868686] ml-[-8px]"
+                    class="font-bold text-[15px] font-[var(--main-black)]  dark:text-[var(--sec-black)] ml-[-8px]"
                   >
                     Szymon Bieliński
                   </p>
                   <p
-                    class="font-light text-[11px] font-[#464646] dark:text-[#868686] ml-[-8px]"
+                    class="font-light text-[11px] font-[#464646] dark:text-[var(--sec-black)] ml-[-8px]"
                   >
                     2025-05-04
                   </p>
@@ -537,14 +538,14 @@
               </div>
               <img src="./img/stars-big.svg" alt="" class="w-[95px] h-[20px]" />
               <p
-                class="text-[#2d2d2d] dark:text-[#efefef] text-[13px] mt-[8px]"
+                class="text-[var(--main-black)]  dark:text-[var(--sec-white)] text-[13px] mt-[8px]"
               >
                 Zdecydowanie najlepszy barber w Warszawie do jakiego
                 zawitałem...
               </p>
               <a
                 href="#"
-                class="text-[13px] text-[#464646] dark:text-[#868686] mt-[8px]"
+                class="text-[13px] text-[#464646] dark:text-[var(--sec-black)] mt-[8px] hover:text-[var(--main-white)] transition-all duration-300 ease-in-out"
               >
                 Czytaj więcej
               </a>
@@ -558,7 +559,7 @@
       ></section>
 
       <section
-        class="pt-[40px] bg-[#A66841] dark:bg-[#2d2d2d] max-w-screen xl:pt-[0px]"
+        class="pt-[40px] bg-[var(--sec-orange)] dark:bg-[var(--main-black)]  max-w-screen xl:pt-[0px]"
       >
         <div
           class="pt-[60px] xl:flex xl:flex-row xl:gap-[5px] xl:justify-center xl:px-[40px] xl:items-center xl:py-[40px]"
@@ -569,7 +570,7 @@
             class="w-[225px] h-[140px] mx-auto"
           />
           <div
-            class="m-auto py-[24px] xl:flex xl:flex-row xl:gap-[5px] xl:py-[0px]"
+            class="m-auto py-[24px] xl:flex xl:flex-row xl:gap-[18px] xl:py-[0px]"
           >
             <div
               class="flex flex-row mx-auto w-[250px] gap-[8px] mt-[32px] xl:mt-[0px]"
@@ -577,42 +578,42 @@
               <img src="./img/clock.svg" alt="" class="self-start" />
               <div class="flex flex-col">
                 <h6
-                  class="text-[24px] text-[#fff] dark:text-[#A66841] text-shadow-[2px_2px_2px_#000]"
+                  class="text-[24px] text-[var(--main-white)] dark:text-[var(--sec-orange)] text-shadow-[2px_2px_2px_#111111] mt-[-5px]"
                 >
                   Godziny Otwarcia
                 </h6>
                 <p
-                  class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]"
+                  class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#111111]"
                 >
                   Poniedziałek 9:00-18:00
                 </p>
                 <p
-                  class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]"
+                  class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#111111]"
                 >
                   Wtorek 9:00-18:00
                 </p>
                 <p
-                  class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]"
+                  class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#111111]"
                 >
                   Środa 9:00-18:00
                 </p>
                 <p
-                  class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]"
+                  class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#111111]"
                 >
                   Czwartek 9:00-18:00
                 </p>
                 <p
-                  class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]"
+                  class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#111111]"
                 >
                   Piątek 9:00-18:00
                 </p>
                 <p
-                  class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]"
+                  class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#111111]"
                 >
                   Sobota 9:00-18:00
                 </p>
                 <p
-                  class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]"
+                  class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#111111]"
                 >
                   Niedziela -
                 </p>
@@ -624,12 +625,12 @@
               <img src="./img/phone.svg" alt="" class="self-start" />
               <div class="flex flex-col">
                 <h6
-                  class="text-[24px] text-[#fff] dark:text-[#A66841] text-shadow-[2px_2px_2px_#000]"
+                  class="text-[24px] text-[var(--main-white)] dark:text-[var(--sec-orange)] text-shadow-[2px_2px_2px_#111111] mt-[-5px]"
                 >
                   Telefon:
                 </h6>
                 <p
-                  class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]"
+                  class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#111111]"
                 >
                   +48 694 358 660
                 </p>
@@ -641,12 +642,12 @@
               <img src="./img/mail.svg" alt="" class="self-start" />
               <div class="flex flex-col">
                 <h6
-                  class="text-[24px] text-[#fff] dark:text-[#A66841] text-shadow-[2px_2px_2px_#000]"
+                  class="text-[24px] text-[var(--main-white)] dark:text-[var(--sec-orange)] text-shadow-[2px_2px_2px_#111111] mt-[-5px]"
                 >
-                  E-mail:
+                  E-mail: 
                 </h6>
                 <p
-                  class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]"
+                  class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#111111]"
                 >
                   Podostrze@gmail.com
                 </p>
@@ -658,17 +659,17 @@
               <img src="./img/map-pin.svg" alt="" class="self-start" />
               <div class="flex flex-col">
                 <h6
-                  class="text-[24px] text-[#fff] dark:text-[#A66841] text-shadow-[2px_2px_2px_#000]"
+                  class="text-[24px] text-[var(--main-white)] dark:text-[var(--sec-orange)] text-shadow-[2px_2px_2px_#111111] mt-[-5px]"
                 >
                   Adres:
                 </h6>
                 <p
-                  class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]"
+                  class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#111111]"
                 >
                   Opole, 42-222
                 </p>
                 <p
-                  class="text-[#fff] text-[18px] text-shadow-[2px_2px_2px_#000]"
+                  class="text-[var(--main-white)] text-[18px] text-shadow-[2px_2px_2px_#111111]"
                 >
                   ul.Podchalna 22
                 </p>
@@ -679,9 +680,9 @@
         <div
           class="py-[32px] flex flex-col gap-[16px] items-center border-t-[1px] border-t-[#7b7b7b] xl:py-[16px] xl:gap-[32px] xl:flex-row xl:justify-center"
         >
-          <p class="text-[#fff] text-[14px]">2025 Wszelkie prawa zastrzeżone</p>
-          <a href="#" class="text-[#fff] text-[14px] transition-all ease-in-out duration-300 hover:text-[#A66841]"> Polityka prywatności </a>
-          <a href="#" class="text-[#fff] text-[14px] transition-all ease-in-out duration-300 hover:text-[#A66841]">
+          <p class="text-[var(--main-white)] text-[14px]">2025 Wszelkie prawa zastrzeżone</p>
+          <a href="#" class="text-[var(--main-white)] text-[14px] transition-all ease-in-out duration-300 hover:text-[var(--sec-orange)]"> Polityka prywatności </a>
+          <a href="#" class="text-[var(--main-white)] text-[14px] transition-all ease-in-out duration-300 hover:text-[var(--sec-orange)]">
             Projekt & realizacja: Patryk Jary
           </a>
         </div>
@@ -689,7 +690,7 @@
 
       <div
         id="mobileMenu"
-        class="fixed top-[0px] right-[0px] flex flex-row bg-[#A66841] h-screen w-screen justify-center translate-x-full transition-transform duration-500 ease-in-out z-40"
+        class="fixed top-[0px] right-[0px] flex flex-row bg-[var(--sec-orange)] h-screen w-screen justify-center translate-x-full transition-transform duration-500 ease-in-out z-40"
       >
         <img
           src="./img/close.svg"

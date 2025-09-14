@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const sectionH2 = document.querySelectorAll("section h2")
   const buttonSection3 = document.querySelector(".divArticles a");
   const buttonSection2 = document.querySelector(".buttonSection2");
+  const buttonSection4 = document.querySelector(".button4");
   const divArticles = document.querySelector(".divArticles");
   const TeamPic = document.querySelector(".teamPic");
   const sekcja1 = document.querySelectorAll(".classSection1");
@@ -332,6 +333,13 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: buttonSection2,
       start: "top 80%",
       onEnter: () => buttonSection2.classList.add("ButtonSection2Active")
+    },
+  });
+  gsap.to(buttonSection4, {
+    scrollTrigger: {
+      trigger: buttonSection4,
+      start: "top 80%",
+      onEnter: () => buttonSection4.classList.add("ButtonSection4Active")
     },
   });
   ///// ANIMACJE POJAWIANIA SIE PRZYCISKÓW A \\\\\
