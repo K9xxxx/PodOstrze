@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -276,9 +275,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .h-\[20px\] {
     height: 20px;
   }
@@ -354,17 +350,11 @@
   .max-w-screen {
     max-width: 100vw;
   }
-  .flex-shrink {
-    flex-shrink: 1;
-  }
   .flex-shrink-0 {
     flex-shrink: 0;
   }
   .shrink-0 {
     flex-shrink: 0;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .translate-x-0 {
     --tw-translate-x: calc(var(--spacing) * 0);
@@ -385,9 +375,6 @@
   }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .snap-x {
     scroll-snap-type: x var(--tw-scroll-snap-strictness);
@@ -424,6 +411,9 @@
   }
   .gap-\[20px\] {
     gap: 20px;
+  }
+  .gap-\[24px\] {
+    gap: 24px;
   }
   .gap-\[32px\] {
     gap: 32px;
@@ -492,20 +482,26 @@
   .bg-\[\#e6e6e6\] {
     background-color: #e6e6e6;
   }
-  .bg-\[\#fff\] {
-    background-color: #fff;
+  .bg-\[var\(--main-orange\)\] {
+    background-color: var(--main-orange);
   }
   .bg-\[var\(--sec-orange\)\] {
     background-color: var(--sec-orange);
   }
-  .bg-gray-500 {
-    background-color: var(--color-gray-500);
+  .bg-\[url\(\'\.\.\/img\/facebook-straight-white\.svg\'\)\] {
+    background-image: url('../img/facebook-straight-white.svg');
+  }
+  .bg-\[url\(\'\.\.\/img\/instagram-icon\.svg\'\)\] {
+    background-image: url('../img/instagram-icon.svg');
   }
   .bg-\[url\(\'\.\.\/img\/landing-page\.png\'\)\] {
     background-image: url('../img/landing-page.png');
   }
   .bg-\[url\(\'\.\.\/img\/map\.png\'\)\] {
     background-image: url('../img/map.png');
+  }
+  .bg-\[url\(\'\.\.\/img\/onas\.png\'\)\] {
+    background-image: url('../img/onas.png');
   }
   .bg-\[url\(\'\.\.\/img\/pod-ostrze\.png\'\)\] {
     background-image: url('../img/pod-ostrze.png');
@@ -518,6 +514,9 @@
   }
   .bg-\[url\(\'\.\.\/img\/sekcja1-2\.jpg\'\)\] {
     background-image: url('../img/sekcja1-2.jpg');
+  }
+  .bg-\[url\(\'\.\.\/img\/tiktok-icon\.svg\'\)\] {
+    background-image: url('../img/tiktok-icon.svg');
   }
   .bg-\[url\(\'\.\.\/img\/uslugi1\.png\'\)\] {
     background-image: url('../img/uslugi1.png');
@@ -643,9 +642,6 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .opacity-0 {
     opacity: 0%;
   }
@@ -653,9 +649,8 @@
     --tw-shadow: 0px 0px 10px var(--tw-shadow-color, #000000);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
+  .filter {
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .transition-all {
     transition-property: all;
@@ -959,11 +954,6 @@
   .xl\:justify-start {
     @media (width >= 80rem) {
       justify-content: flex-start;
-    }
-  }
-  .xl\:gap-\[1px\] {
-    @media (width >= 80rem) {
-      gap: 1px;
     }
   }
   .xl\:gap-\[5px\] {
@@ -1455,10 +1445,58 @@ section .active-h2.additional-h2 {
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
+@property --tw-blur {
   syntax: "*";
   inherits: false;
-  initial-value: solid;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-duration {
   syntax: "*";
@@ -1507,7 +1545,19 @@ section .active-h2.additional-h2 {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
       --tw-duration: initial;
       --tw-ease: initial;
       --tw-text-shadow-color: initial;
